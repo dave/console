@@ -1,6 +1,9 @@
 package console
 
-import "github.com/gopherjs/gopherjs/js"
+import (
+	"os"
+	"github.com/gopherjs/gopherjs/js"
+)
 
 func init() {
 	w := &Writer{}
