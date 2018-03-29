@@ -2,6 +2,12 @@ package console
 
 import "github.com/gopherjs/gopherjs/js"
 
+func init() {
+	w := &Writer{}
+	os.Stdout = w
+	os.Stderr = w
+}
+
 type Writer struct {
 	Top bool
 	pre *js.Object
