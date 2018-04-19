@@ -1,15 +1,6 @@
 package console
 
-import (
-	"os"
-	"github.com/gopherjs/gopherjs/js"
-)
-
-func init() {
-	w := &Writer{}
-	os.Stdout = w
-	os.Stderr = w
-}
+import "github.com/gopherjs/gopherjs/js"
 
 type Writer struct {
 	Top bool
