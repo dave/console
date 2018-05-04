@@ -7,6 +7,11 @@ type Writer struct {
 	pre *js.Object
 }
 
+func (w *Writer) Message(m string) {
+	w.Clear()
+	w.Write([]byte(m))
+}
+
 func (w *Writer) Clear() {
 	if w.pre == nil {
 		return
